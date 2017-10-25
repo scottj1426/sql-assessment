@@ -1,3 +1,5 @@
-SELECT vehicles.* FROM vehicles 
-JOIN users ON vehicles.owner_id = users.id
+SELECT vehicles.id, make, model, year, owner_id
+FROM vehicles
+JOIN users
+ON users.id = vehicles.owner_id
 WHERE users.name LIKE $1;
