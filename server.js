@@ -13,11 +13,11 @@ app.use(cors());
 // You need to complete the information below to connect
 // to the assessbox database on your postgres server.
 massive({
-  host: //host,
-  port: //port,
-  database: //database,
-  user: //user,
-  password: //password
+  host: "localhost",
+  port: 5432,
+  database: "assessbox",
+  user: 'JamesScott',
+  password: ""
 }).then( db => {
   app.set('db', db);
 
@@ -33,7 +33,7 @@ massive({
 
 
 // ===== Build enpoints below ============
-
+app.get('/api/users', mainCtrl.getAllUsers);
 
 
 
