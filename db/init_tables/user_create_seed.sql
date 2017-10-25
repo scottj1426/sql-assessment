@@ -13,14 +13,13 @@ DROP TABLE IF EXISTS users CASCADE;
 
 CREATE TABLE IF NOT EXISTS users (
   id serial primary key, --(add datatype and/or table contraint),
-  name text, --(add datatype and/or table contraint),
-  email text, --(add datatype and/or table contraint)
+  name varChar(40), --(add datatype and/or table contraint),
+  email varChar(40)--(add datatype and/or table contraint)
 );
 
 -- === INSERT STATEMENT ===============
 
 -- Complete the first part of the insert statement below. The values below need to be inserted into the 'users' table.
-
 
 INSERT INTO users (name, email)
 VALUES

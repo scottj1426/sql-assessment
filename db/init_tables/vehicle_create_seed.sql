@@ -19,14 +19,14 @@ CREATE TABLE IF NOT EXISTS vehicles (
   model text,--(add datatype and/or table contraint),
   year integer, --(add datatype and/or table contraint),
   owner_id integer,
-  foreign key (owner_id) references users(id) --(add datatype and/or table contraint)
+  foreign key (owner_id) references users (id) --(add datatype and/or table contraint)
 );
 
 -- === INSERT STATEMENT ===============
 
 -- Complete the insert statement below. The values below need to be inserted into the 'vehicles' table.
 
-INSERT INTO vehicles(make, model, year, owner_id)
+INSERT INTO vehicles (make, model, year, owner_id)
 VALUES
 ('Toyota', 'Camry', 1991, 1),
 ('Honda', 'Civic', 1995, 1),
